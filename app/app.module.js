@@ -1,3 +1,4 @@
 angular.module('angularPip', [
-    'postList'
+    'postList',
+    'home'
 ]);
