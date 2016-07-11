@@ -5,6 +5,7 @@
     <title>angular-pip</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
   </head>
   <body>
 
@@ -24,16 +25,21 @@
         <home></home>
     </section>
 
+    <!-- Main modules -->
+    <script src="app.module.js"></script>
+    <script src="core/core/core.module.js"></script>
+    
+    <!-- Core features -->
+    <script src="core/post/post.module.js"></script>
+    <script src="core/post/post.service.js"></script>
+
     <!-- Posts component -->
     <script src="post-list/post-list.module.js"></script>
     <script src="post-list/post-list.component.js"></script>
-    
+
     <!-- Home component -->
     <script src="home/home.module.js"></script>
     <script src="home/home.component.js"></script>
-
-    <!-- Main module -->
-    <script src="app.module.js"></script>
 
   </body>
 </html>

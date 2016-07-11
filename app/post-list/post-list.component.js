@@ -2,13 +2,11 @@ angular.
     module('postList').
     component('postList', {
         templateUrl: 'post-list/post-list.template.html',
-        controller: ['$http',
-            function PostListController($http) {
+        controller: ['Post',
+            function PostListController(Post) {
                 var self = this;
 
-                $http.get('posts/posts.json').then(function(response) {
-                    self.posts = response.data;
-                })
+                self.posts = Post.query();
             }
         ]
     });
