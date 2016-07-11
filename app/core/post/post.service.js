@@ -1,6 +1,6 @@
 angular
     .module('core.post')
-        .factory('Post', ['$resource',
+    .factory('Post', ['$resource',
         function($resource) {
             return $resource('posts/posts.json', {}, {});
         }   

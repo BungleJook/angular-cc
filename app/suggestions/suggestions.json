@@ -1,0 +1,26 @@
+[
+    {
+        "age": 0,
+        "title": "Take over the world",
+        "upvotes": 15,
+        "comments": []
+    }, 
+    {
+        "age": 1,
+        "title": "Smash some planets",
+        "upvotes": 7,
+        "comments": []
+    },
+    {
+        "age": 2,
+        "title": "Eat yoghurt",
+        "upvotes": 9,
+        "comments": []
+    },
+    {
+        "age": 3,
+        "title": "Steal some cornflakes",
+        "upvotes": 3,
+        "comments": []
+    }
+]

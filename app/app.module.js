@@ -1,5 +1,6 @@
 angular.module('angularPip', [
     'core',
     'postList',
-    'home'
+    'home',
+    'suggestionList'
 ]);
