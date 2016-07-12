@@ -1,9 +1,9 @@
 <section class="container">
-    <form ng-submit="addSuggestion()" class="panel panel-default">
+    <form ng-submit="$ctrl.addSuggestion()" class="panel panel-default">
         <div class="panel-body">
             <h3>Submit Your Suggestion</h3>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Write a suggestion!" ng-model="title"></input>
+                <input type="text" class="form-control" placeholder="Write a suggestion!" ng-model="$ctrl.title"></input>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
@@ -15,6 +15,7 @@
         <li class="list-group-item" ng-repeat="suggestion in $ctrl.suggestions | orderBy:'-upvotes'">
             <p>{{suggestion.title}}</p>
             <p><strong>Upvotes:</strong> {{suggestion.upvotes}}</p>
+            <p><strong>Date Added:</strong> {{suggestion.date | date:"MMM d 'at' HH:mm"}}</p>
         </li>
     </ul>
 </section>
