@@ -1,6 +1,20 @@
-<ul>
-    <li ng-repeat="suggestion in $ctrl.suggestions | orderBy:'-upvotes'">
-        <p>{{suggestion.title}}</p>
-        <p><strong>Upvotes:</strong> {{suggestion.upvotes}}</p>
-    </li>
-</ul>
+<section class="container">
+    <form ng-submit="addSuggestion()" class="panel panel-default">
+        <div class="panel-body">
+            <h3>Submit Your Suggestion</h3>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Write a suggestion!" ng-model="title"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</section>
+
+<section class="container">
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="suggestion in $ctrl.suggestions | orderBy:'-upvotes'">
+            <p>{{suggestion.title}}</p>
+            <p><strong>Upvotes:</strong> {{suggestion.upvotes}}</p>
+        </li>
+    </ul>
+</section>
