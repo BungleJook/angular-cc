@@ -1,5 +1,5 @@
 <ul>
-    <li ng-repeat="suggestion in $ctrl.suggestions">
+    <li ng-repeat="suggestion in $ctrl.suggestions | orderBy:!'upvotes'">
         <p>{{suggestion.title}}</p>
         <p><strong>Upvotes:</strong> {{suggestion.upvotes}}</p>
     </li>
