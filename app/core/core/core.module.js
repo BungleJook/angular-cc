@@ -1,1 +1,1 @@
-angular.module('core', ['core.post']);
+angular.module('core', ['core.suggestion']);
