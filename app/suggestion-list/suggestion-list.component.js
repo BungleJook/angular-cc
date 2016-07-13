@@ -22,6 +22,15 @@ angular
                     // clear input
                     self.title = '';
                 }
+
+                self.vote = function(suggestion, direction) {
+                    if (direction === true) {
+                        suggestion.upvotes += 1;
+                    }
+                    else if (direction === false) {
+                        suggestion.upvotes -= 1;
+                    }
+                }
             }
         ]
     });
