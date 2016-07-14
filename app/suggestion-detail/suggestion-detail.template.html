@@ -1,0 +1,27 @@
+<section class="container panel panel-default">
+    
+    <h2><a href="#!/suggestions">{{$ctrl.suggestion.title}}</a></h2>
+    <p><strong>Upvotes:</strong> {{$ctrl.suggestion.upvotes}}</p>
+    <p><strong>Date:</strong> {{$ctrl.suggestion.date | date: "MMM dd 'at' HH:mm"}}</p>
+    <p><strong>Comments:</strong> {{$ctrl.commentsCount}}</p>
+    
+    <ul class="list-group">
+        <li ng-repeat="comment in $ctrl.suggestion.comments" class="list-group-item">
+            <p>{{comment.content}}</p>
+            <p><strong>Upvotes:</strong> {{comment.upvotes}}</p>
+            <p><strong>Date:</strong> {{comment.date | date: "MMM dd 'at' HH:mm"}}</p>
+        </li>
+        <li ng-if="$ctrl.suggestion.comments.length == 0" class="list-group-item">
+            <em>No comments yet!</em>
+        </li>
+    </ul>
+
+    <form ng-submit="$ctrl.addComment()" class="panel-body">
+        <div class="form-group">
+            <p>Add a comment:</p>
+            <input type="text" class="form-control" placeholder="Write a comment!" ng-model="$ctrl.content"></input>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</section>

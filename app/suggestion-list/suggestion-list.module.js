@@ -1,4 +1,4 @@
-angular.module('suggestionList', ['core.suggestion', 'ngRoute'])
+angular.module('suggestionList', ['ngRoute', 'core.suggestion'])
     .config(['$locationProvider', '$routeProvider',
         function config($locationProvider, $routeProvider) {
             $locationProvider.hashPrefix('!');

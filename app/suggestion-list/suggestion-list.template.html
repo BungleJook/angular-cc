@@ -13,7 +13,7 @@
 <section class="container">
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="suggestion in $ctrl.suggestions | orderBy:'-upvotes'">
-            <p>{{suggestion.title}}</p>
+            <p><a href="#!/suggestion/{{$index}}">{{suggestion.title}}</a></p>
             <p><strong>Upvotes:</strong> {{suggestion.upvotes}} <span class="glyphicon glyphicon-plus-sign" ng-click="$ctrl.vote(suggestion, true)"></span> <span class="glyphicon glyphicon-minus-sign" ng-click="$ctrl.vote(suggestion, false)"></span></p>
             <p><strong>Date Added:</strong> {{suggestion.date | date:"MMM d 'at' HH:mm"}}</p>
         </li>

@@ -1,12 +1,11 @@
-angular.module('angularPip', [
-    'core',
-    'suggestionList',
-    'suggestionDetail'])
+angular.module('suggestionDetail', ['ngRoute', 'core.suggestion'])
     .config(['$locationProvider', '$routeProvider',
         function config($locationProvider, $routeProvider) {
             $locationProvider.hashPrefix('!');
 
             $routeProvider
-                .otherwise('/suggestions');
+                .when('/suggestion/:id', {
+                    template: '<suggestion-detail></suggestion-detail>'
+                });
         }
     ]);
